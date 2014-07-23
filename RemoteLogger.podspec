@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
 	s.requires_arc = true
 	s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
 
-    s.subspec 'RestKit_fork' do |rs|
-	  	rs.name             =  'RestKit_fork'
-	  	rs.version          =  '0.23.2'
+    s.subspec 'RestKit_Forked' do |rs|
+	  	rs.name             =  'RestKit_Forked'
+	  	rs.version          =  '0.23.2b'
 	  	rs.summary          =  'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
 	  	rs.homepage         =  'http://www.restkit.org'
 	  	rs.social_media_url =  'https://twitter.com/RestKit'
@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
 	  	rs.source           =  { :git => 'https://github.com/RestKit/RestKit.git', :tag => "v#{s.version}" }
 	  	rs.license          =  'Apache License, Version 2.0'
 
+=begin
 		# Platform setup
 		rs.requires_arc = true
 		rs.ios.deployment_target = '5.0'
@@ -111,5 +112,6 @@ Pod::Spec.new do |s|
 		    ss.source_files   = 'Code/RestKit.h', 'Code/Support.h', 'Code/Support', 'Vendor/LibComponentLogging/Core', 'Vendor/LibComponentLogging/NSLog'
 		    ss.dependency 'TransitionKit', '2.1.0'
 		end
+=end
 	end
 end
