@@ -1,7 +1,5 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, "6.1"
 
-target "RemoteLogger" do
+target :ios do
 
 pod 'CocoaLumberjack'
 pod 'RestKit', '~> 0.23'
