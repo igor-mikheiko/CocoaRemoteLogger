@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
 	  rs.source           =  { :git => 'https://github.com/RestKit/RestKit.git', :tag => "v#{s.version}" }
 	  rs.license          =  'Apache License, Version 2.0'
 
+	  rs.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
+
 	  # Platform setup
 	  rs.requires_arc = true
 	  rs.ios.deployment_target = '5.0'
