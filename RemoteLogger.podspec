@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
 
+=begin
   s.subspec 'RestKit' do |rs|
 	  rs.name             =  'RestKit'
 	  rs.version          =  '0.23.2'
@@ -115,4 +116,5 @@ Pod::Spec.new do |s|
 	    ss.dependency 'TransitionKit', '2.1.0'
 	  end
 	end
+=end
 end
