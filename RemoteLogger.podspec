@@ -6,4 +6,11 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaLumberjack'
   s.dependency 'RestKit'
   s.dependency 'OpenUDID'
+
+  def s.post_install(target)
+    prefix_header = config.project_pods_root + target.prefix_header_filename
+     prefix_header.open('a') do |file|
+        file.puts('Sapmple')
+    end
+  end
 end
