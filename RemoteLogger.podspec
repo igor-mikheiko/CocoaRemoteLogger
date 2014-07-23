@@ -8,8 +8,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
 
-
-  rs.subspec 'RestKit' do |s|
+  s.subspec 'RestKit' do |rs|
 	  rs.name             =  'RestKit'
 	  rs.version          =  '0.23.2'
 	  rs.summary          =  'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
