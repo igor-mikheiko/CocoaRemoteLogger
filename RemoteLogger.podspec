@@ -5,10 +5,12 @@ Pod::Spec.new do |s|
 	s.source_files = 'RemoteLogger.{h,m}', 'RemoteLoggerServiceProvider.{h,m}'
 	s.dependency 'CocoaLumberjack'  
 	s.dependency 'OpenUDID'
+	s.dependency 'RestKit'
 	s.requires_arc = true
 	s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
 
-    s.subspec 'RestKit_Forked' do |rs|
+=begin
+    s.subspec 'RestKit' do |rs|
 	  	rs.name             =  'RestKit_Forked'
 	  	rs.version          =  '0.23.2'
 	  	rs.summary          =  'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
@@ -18,7 +20,7 @@ Pod::Spec.new do |s|
 	  	rs.source           =  { :git => 'https://github.com/RestKit/RestKit.git', :tag => "v#{s.version}" }
 	  	rs.license          =  'Apache License, Version 2.0'
 
-=begin
+
 		# Platform setup
 		rs.requires_arc = true
 		rs.ios.deployment_target = '5.0'

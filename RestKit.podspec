@@ -1,13 +1,11 @@
-Pod::Spec.new do |s|
-  s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
-  
+Pod::Spec.new do |s|  
   s.name             =  'RestKit'
-  s.version          =  '0.23.2'
+  s.version          =  '0.23.2special'
   s.summary          =  'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
   s.homepage         =  'http://www.restkit.org'
   s.social_media_url =  'https://twitter.com/RestKit'
   s.author           =  { 'Blake Watters' => 'blakewatters@gmail.com' }
-  s.source           =  { :git => 'https://github.com/RestKit/RestKit.git', :tag => "v#{s.version}" }
+  s.source           =  { :git => 'https://github.com/RestKit/RestKit.git', :tag => "v0.23.2" }
   s.license          =  'Apache License, Version 2.0'
 
   # Platform setup
@@ -22,6 +20,8 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = <<-EOS
 #ifdef COCOAPODS_POD_AVAILABLE_RestKit_CoreData
     #import <CoreData/CoreData.h>
+
+    #define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)
 #endif
 EOS
 
