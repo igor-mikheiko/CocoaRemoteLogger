@@ -1,8 +1,6 @@
 
 def import_pods
   pod 'RestKit', :path => '.'
-  pod 'RestKit/Testing', :path => '.'
-  pod 'RestKit/Search', :path => '.'
 end
 
 target :ios do

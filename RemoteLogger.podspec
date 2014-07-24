@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 	s.source_files = 'RemoteLogger.{h,m}', 'RemoteLoggerServiceProvider.{h,m}'
 	s.dependency 'CocoaLumberjack'  
 	s.dependency 'OpenUDID'
-	s.dependency 'RestKit'
+	s.dependency 'RestKit', :local => '.'
 	s.requires_arc = true
 	s.prefix_header_contents = '#define NSLog(format, ...) RLLog(format, ##__VA_ARGS__)'
 
