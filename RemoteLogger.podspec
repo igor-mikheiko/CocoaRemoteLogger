@@ -114,6 +114,6 @@ Pod::Spec.new do |s|
 		    ss.source_files   = 'Code/RestKit.h', 'Code/Support.h', 'Code/Support', 'Vendor/LibComponentLogging/Core', 'Vendor/LibComponentLogging/NSLog'
 		    ss.dependency 'TransitionKit', '2.1.0'
 		end
-=end
 	end
+=end
 end
